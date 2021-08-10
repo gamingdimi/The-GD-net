@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/4476ccea29.js" crossorigin="anonymous"></script>
+    <title>The GD net | Contact us</title>
+</head>
+<body>
+    <style>
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap');
+
+-root {
+    --blackle: #222723;
+    --dark-grackle: #223723;
+    --light-green: rgb(0, 192, 0); --light-graple: #c3c3c3;
+    --graple: #777777; --dark-blackle: #222222;
+}
+
+em {
+    font-style: normal;
+}
+
+* {
+    margin: 0; padding: 0; box-sizing: border-box;
+    font-family: "Noto Sans JP", sans-serif;
+    text-align: center;
+}
+
+body {
+    background-color: #222222;
+}
+
+.title {
+    color: green;
+}
+
+.headers {
+    color: #ff9100;
+    font-weight: bold;
+}
+
+.p {
+    color: rgb(0, 192, 0);
+}
+
+#greet-2 {
+    font-weight: bold;
+}
+
+#made-by {
+    color: gray;
+    font-family: 'Press Start 2P', cursive;
+}
+
+/* Navbar */
+nav li:hover {
+    color: #000; background-color: green;
+    border-radius: 14px;
+}
+
+@media(max-width: 1250){
+    .main-bar {
+        padding: 0 2%;
+    }
+    nav li a {
+        padding: 15px 20px;
+    }
+}
+
+.checkbtn {
+    float: right;
+    width: 20px;
+    height: 18px;
+    position: relative;
+    transform: rotate(0);
+    transition: 0.5s ease-in-out;
+    top: 25px;
+    display: none;
+}
+
+.checkbtn span {
+    background-color: #fff; display: block;
+    position: absolute; height: 2px; width: 100%;
+    border-radius: 1px; opacity: 1; left: 0; transform: rotate(0);
+    transition: 0.25s ease-in-out;
+}
+
+.checkbtn span:nth-child(1) {
+    top: 0;
+}
+
+.checkbtn span:nth-child(2) {
+    top: 7px;
+}
+
+.checkbtn span:nth-child(3) {
+    top: 14px;
+}
+
+@media(max-width: 992px) {
+    .main-bar{
+        padding: 0;
+    }
+
+    .checkbtn {
+        display: block; margin-right: 40px;
+    }
+
+    nav ul {
+        position: fixed;
+        width: 350px;
+        height: 100vh;
+        background: #22272b;
+        top: 68px; left: -100%;
+        text-align: center;
+        transition: all 0.5s;
+    }
+
+    nav ul li  {
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+
+    #check:checked ~ ul {
+        left: 0;
+    }
+}
+
+@media(max-width: 560px) {
+    nav ul {
+        display:block; width: 100%;
+    }
+}
+
+.main-bar {
+    background-color: #22272b !important;
+    display: flow-root; padding: 0 10%;
+}
+
+.logo-header {
+    display: table; float: left; vertical-align: middle;
+    padding: 0; color: rgb(0, 192, 0); width: 180px; height: 68px;
+    margin-top: 0; margin-bottom: 0; margin-left: 0; margin-right: 0;
+    position: relative; z-index: 9; transition: all 0.5s; -moz-transition: all 0.5s;
+    -webkit-transition: all 0.5s; -o-transition: all 0.5s;
+}
+
+ul {
+    float: right;
+}
+
+
+
+.logo-header:before{
+    content: ""; position: absolute; bottom: 0; height: 100%; z-index: -1;
+    right: -50px; width: 80%; transform: skew(30deg); background: rgb(0, 192, 0);
+}
+
+.logo-header:after {
+    content: ""; position: absolute; bottom: 0; height: 100%; z-index: -1;
+    right: 10%; width: 2000px; background: rgb(0, 192, 0);
+}
+
+.logo-header a{
+    color: #22272b; font-size: 33px; font-weight: bold; line-height: 70px;
+    text-decoration: none;
+}
+ 
+#check {
+    display: none;
+}
+
+nav ul li {
+    display: inline-block; line-height: 70px; border-radius: 14px;
+}
+
+nav li.active a{
+    color: #fff;
+    border-radius: 14px; 
+}
+
+nav li a {
+    padding: 15px 25px;
+    border: 0;
+    margin-bottom: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
+    opacity: 1;
+    text-decoration: none;
+    transition: all 0.5s;
+    border-radius: 14px;
+}
+/* contact us */
+section {
+    height: 100vh;
+    width: 100%;
+    display: flex; flex-direction: column;
+    align-items: center; 
+    justify-content: center;
+}
+
+.container {
+    width: 90%; max-width: 500px;
+    margin: 0 auto; background-color: #777777;
+    padding: 20px; border-radius: 1rem;
+    box-shadow: 0px 0px 20px #ffffff4c;
+    margin-bottom: 2rem;
+}
+
+.form-group {
+    width: 100%; margin-top: 20px;
+    font-size: 20px;
+}
+
+.form-group input, .form-group textarea {
+    width: 100%; padding: 5px; font-size: 18px;
+    border: 1px solid rgba(128, 128, 128, 0.2);
+    margin-top: 5px;
+}
+
+textarea {
+    resize: vertical;
+}
+
+button[type="submit"] {
+    width: 100%; border:none; outline: none;
+    padding: 20px; font-size: 24px; border-radius: 8px;
+    color: rgb(0, 192, 0); text-align: center;
+    cursor: pointer; margin-top: 10px;
+    background-color: rgba(128, 128, 128, 0.2);
+}
+
+button[type="submit"]:hover {
+    background-color: rgb(0, 192, 0);
+    color: #22372b; transition: 0.2s ease-in;
+}
+#status {
+    color: rgb(0, 192, 0);
+    width: 90%; max-width: 500px;
+    text-align: center; border-radius: 8px;
+    margin: 0 auto; padding: 10px;
+}
+#status.success {
+    background-color: rgba(0, 192, 0, 0.22);
+    color: status 4s ease forwards;
+}
+#status.error {
+    background-color: rgba(192, 0, 0, 0.22);
+    color: rgb(192, 0, 0); color: status 4s ease forwards;
+}
+
+@keyframes status {
+    0% {
+        opacity: 1;
+        pointer-events: all;
+    }
+    90% {
+        opacity: 1;
+        pointer-events: all;
+    }
+    10% {
+        opacity: 0;
+        pointer-events: none;
+    }
+}
+    </style>
+    <script>
+        var form = document.getElementById("my-form");
+    
+    async function handleSubmit(event) {
+      event.preventDefault();
+      var status = document.getElementById("my-form-status");
+      var data = new FormData(event.target);
+      fetch(event.target.action, {
+        method: form.method,
+        body: data,
+        headers: {
+            'Accept': 'application/json'
+        }
+      }).then(response => {
+        status.innerHTML = " Successfuly submitted your form!";
+        form.reset()
+      }).catch(error => {
+        status.innerHTML = "Oops! There was an error submitting your form"
+      });
+    }
+    form.addEventListener("submit", handleSubmit)
+    </script>
+    <div class="main-bar">
+        <nav>
+            <input type="checkbox" id="check">
+            <label for="check" class="checkbtn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+            
+            <div class="logo-header">
+                <a href="index.html"><em>The GD net</em></a>
+            </div>
+
+            <ul>
+                <li class="active" id="home"><a href="index.html">Home</a></li>
+                <li class="active"><a href="posts.html">Posts</a></li>
+                <li class="active"><a href="credits.html">Credits</a></li>
+                <li class="active"><a href="contact_us.html">Contact Us</a></li>
+                <li class="active"><a href="changelog.html">Change Log</a></li>
+            </ul>
+        </nav>
+    </div>
+    <h1 class="title">Contact us</h1>
+    <p class="p">Here you drop suggestions and questions.</p>
+    <section>
+        <div class="container">
+
+            <form action="https://formspree.io/f/xyylerjo" method="POST" id="my-form">
+                <div class="form-group">
+                    <label for="username"> Username </label>
+                    <input type="text" id='userName' name="userName">
+                <div class="form-group">
+                    <label for="email"> Email </label>
+                    <input type="email" id='email' name="email">
+                </div>
+                <div class="form-group">
+                    <label for="message"> Message </label>
+                    <textarea name="message" id="message" cols="30" rows="10"></textarea>
+                </div>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+        <div id="status"></div>
+    </section>
+</body>
+</html>

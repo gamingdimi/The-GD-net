@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap');
+
+-root {
+    --blackle: #222723;
+    --dark-grackle: #223723;
+    --light-green: rgb(0, 192, 0);
+    --graple: #777777; --light-graple: #c3c3c3;
+}
+
+em {
+    font-style: normal;
+}
+
+* {
+    margin: 0; padding: 0; box-sizing: border-box;
+    font-family: "Noto Sans JP", sans-serif;
+    text-align: center;
+}
+
+body {
+    background-color: #222222;
+}
+
+.title-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+i {
+    color: green;
+    font-size: 2rem;
+}
+
+.title{
+    color: green; margin-left: 5px;
+}
+
+.headers {
+    color: #ff9100; font-size: 75px;
+    font-weight: bold; margin-top: 15px;
+}
+
+.p {
+    color: rgb(0, 192, 0);
+}
+
+#greet-2 {
+    font-weight: bold; margin-top: 15px;
+}
+
+#made-by {
+    color: gray; margin: 15px;
+    font-family: 'Press Start 2P', cursive;
+}
+/* navbar */
+nav li:hover {
+    color: #000; background-color: green;
+    border-radius: 14px;
+}
+
+@media(max-width: 1250){
+    .main-bar {
+        padding: 0 2%;
+    }
+    nav li a {
+        padding: 15px 20px;
+    }
+}
+
+.checkbtn {
+    float: right;
+    width: 20px;
+    height: 18px;
+    position: relative;
+    transform: rotate(0);
+    transition: 0.5s ease-in-out;
+    top: 25px;
+    display: none;
+}
+
+.checkbtn span {
+    background-color: #fff; display: block;
+    position: absolute; height: 2px; width: 100%;
+    border-radius: 1px; opacity: 1; left: 0; transform: rotate(0);
+    transition: 0.25s ease-in-out;
+}
+
+.checkbtn span:nth-child(1) {
+    top: 0;
+}
+
+.checkbtn span:nth-child(2) {
+    top: 7px;
+}
+
+.checkbtn span:nth-child(3) {
+    top: 14px;
+}
+
+@media(max-width: 992px) {
+    .main-bar{
+        padding: 0;
+    }
+
+    .checkbtn {
+        display: block; margin-right: 40px;
+    }
+
+    nav ul {
+        position: fixed;
+        width: 350px;
+        height: 100vh;
+        background: #22272b;
+        top: 68px; left: -100%;
+        text-align: center;
+        transition: all 0.5s;
+    }
+
+    nav ul li  {
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+
+    #check:checked ~ ul {
+        left: 0;
+    }
+}
+
+@media(max-width: 560px) {
+    nav ul {
+        display:block; width: 100%;
+    }
+}
+
+.main-bar {
+    background-color: #22272b !important;
+    display: flow-root; padding: 0 10%;
+}
+
+.logo-header {
+    display: table; float: left; vertical-align: middle;
+    padding: 0; color: rgb(0, 192, 0); width: 180px; height: 68px;
+    margin-top: 0; margin-bottom: 0; margin-left: 0; margin-right: 0;
+    position: relative; z-index: 9; transition: all 0.5s; -moz-transition: all 0.5s;
+    -webkit-transition: all 0.5s; -o-transition: all 0.5s;
+}
+
+ul {
+    float: right;
+}
+
+
+
+.logo-header:before{
+    content: ""; position: absolute; bottom: 0; height: 100%; z-index: -1;
+    right: -50px; width: 80%; transform: skew(30deg); background: rgb(0, 192, 0);
+}
+
+.logo-header:after {
+    content: ""; position: absolute; bottom: 0; height: 100%; z-index: -1;
+    right: 10%; width: 2000px; background: rgb(0, 192, 0);
+}
+
+.logo-header a{
+    color: #22272b; font-size: 33px; font-weight: bold; line-height: 70px;
+    text-decoration: none;
+}
+ 
+#check {
+    display: none;
+}
+
+nav ul li {
+    display: inline-block; line-height: 70px; border-radius: 14px;
+}
+
+nav li.active a{
+    color: #fff;
+    border-radius: 14px; 
+}
+
+nav li a {
+    padding: 15px 25px;
+    border: 0;
+    margin-bottom: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
+    opacity: 1;
+    text-decoration: none;
+    transition: all 0.5s;
+    border-radius: 14px;
+}

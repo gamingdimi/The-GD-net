@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GD Hangman</title>
+  </head>
+  <body>
+    <p class="p" id="Proccess">loading words...</p>
+    <script>
+      var words = [
+        "javascript",
+        "gaming",
+        "apple",
+        "ape",
+        "axolotl",
+        "boring",
+        "bear",
+        "beef",
+        "boss",
+        "baby",
+        "babies",
+        "banana",
+        "bread",
+        "best",
+        "bee",
+        "carrot",
+        "carpet",
+        "car",
+        "chinese",
+        "chese",
+        "china",
+        "cheers",
+        "cheep",
+        "choose",
+        "chop",
+        "chips",
+        "cyan",
+        "dab",
+        "dash",
+        "data",
+        "database",
+        "desk",
+      ];
+      var randomWord = words[Math.floor(Math.random() * words.length)];
+      var answerArray = [];
+      for (var l = 0; answerArray < randomWord.length; l++) {
+        answerArray[l] = "_";
+      }
+      var remainingLetters = randomWord.length;
+      while (remainingLetters > 0) {
+        // Game code
+
+        // Proccess
+        const answer = document.getElementById("Proccess");
+        answer.innerHTML = answerArray.join(" ");
+        // Take input
+
+        // Update
+      }
+    </script>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap");
+
+      -root {
+        --blackle: #222723;
+        --dark-grackle: #223723;
+        --light-green: rgb(0, 192, 0);
+        --graple: #777777;
+        --light-graple: #c3c3c3;
+        --dark-blackle: #222222;
+      }
+
+      em {
+        font-style: normal;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Noto Sans JP", sans-serif;
+        text-align: center;
+      }
+
+      body {
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        background-color: #000;
+      }
+
+      .title-icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      i {
+        color: green;
+        font-size: 2rem;
+      }
+
+      .title {
+        color: green;
+        margin-left: 5px;
+      }
+
+      .headers {
+        color: #ff9100;
+        font-weight: bold;
+        margin-top: 15px;
+      }
+
+      .p {
+        color: rgb(0, 192, 0);
+      }
+
+      #greet-2 {
+        font-weight: bold;
+        margin-top: 15px;
+      }
+
+      #made-by {
+        color: gray;
+        margin: 15px;
+        font-family: "Press Start 2P", cursive;
+      }
+    </style>
+  </body>
+</html>
